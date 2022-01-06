@@ -1,4 +1,12 @@
 {'Milch': 'milk',
 'Eier': 'eggs',
 'Brot':'bread',
-'Marmelade':'jam'}
+'Marmelade':'jam',
+'Klassenzimmer: class room',
+'Guten Morgen': 'good morning',
+'Morgen': 'morning',
+'Abend':'evening',
+'Blumenkohl':'cauliflower',
+'Blume': 'Flower',
+'Haribo', 'haribo',
+}
