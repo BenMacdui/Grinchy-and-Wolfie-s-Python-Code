@@ -1,2 +1,2 @@
-Milch=milk Eier=eggs Brot=bread Marmelade=jam Morgen=morning Abend=evening Blumenkohl=cauliflower Blume=Flower Haribo=haribo
+Milch milk, Eier eggs, Brot bread, Marmelade jam, Morgen morning, Abend evening, Blumenkohl cauliflower, Blume Flower, Haribo haribo,
 
