@@ -1,0 +1,4 @@
+{'Milch': 'milk',
+'Eier': 'eggs',
+'Brot':'bread',
+'Marmelade':'jam'}
