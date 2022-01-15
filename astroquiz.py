@@ -1,4 +1,5 @@
 import random, sys, time, requests, os, re
+from pprint import pprint
 
 def clear():
     """This function checks whether we are in windows 'nt' or
@@ -28,17 +29,26 @@ input('press enter to continue >>>')
 url = "https://raw.githubusercontent.com/BenMacdui/Grinchy-and-Wolfie-s-Python-Code/main/astronomyquiz.txt"
 
 
-# prints question and answer
 
-
+# get my text file from Github as specified above in the URL variable
 astroquiz = requests.get(url)
 
 
-
+# set the score variable to zero
 score = 0
+
+# we now split the text fill into seperate list items.
 a = astroquiz.text
 x = a.split('--')
+
+# the next line will take 2 items of the list x, which are seperated by 2 spaces or more generated
+# above and and put them into subList to make a list of lists.
+# It is so that I can print the choices and question on # different lines.
+
 subList = [x[n:n+2] for n in range(0, len(x), 2)]
+
+
+# set the total elapsed time variable to zero
 total_elapsed_time = 0
 while total_elapsed_time <= 15:
     quiz = random.choice(subList)
@@ -64,7 +74,7 @@ while total_elapsed_time <= 15:
         elapsed_time = round(elapsed_time, 0)
         total_elapsed_time = elapsed_time + total_elapsed_time
         print()
-        print(f"You took {elapsed_time} seconds and your score is {score}. You are too slow and have not enough points to continue \U0001f608")
+        print(f"""You took {elapsed_time} seconds and your score is {score}. You are too slow and have not enough points to continue \U0001f608""")
         print()
         input("Would you like to appeal against the decision? Press enter")
         print()
@@ -90,10 +100,13 @@ while total_elapsed_time <= 15:
         elif judge == decision[-1]:
             print()
             print(f"Pease try again. Good luck next time {player_name.title()} \U0001f600")
+            print()
+            time.sleep(2)
+            sys.exit()
         else:
             print()
-            r = 20 - score
-            if r != 0:
+            if score > 0 and score < 20:
+                r = 20 - score
 
                 print(f"I will give you {r} points and you will live forever, cause you so nice \U0001f607")
                 print()
@@ -103,10 +116,14 @@ while total_elapsed_time <= 15:
                 time.sleep(2)
                 sys.exit()
             else:
+                input("Enter to continue >>>")
                 print()
-                print("You have scored zero points so far. Sorry I would like to help and I could have had you scored some points. Now you have to go. Sorry \U0001f61e")
+                print("Oh no! I just see that you have scored zero points so far. Sorry I would like to help and I could have, had you scored some points. Unfortunatly now you have to go. It breaks my heart. Sorry \U0001f61e")
                 print()
                 time.sleep(2)
+                print("\U0001f608")
+                time.sleep(1)
+                clear()
                 sys.exit()
     else:
         print()
