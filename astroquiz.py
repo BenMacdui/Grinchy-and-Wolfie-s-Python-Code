@@ -243,6 +243,8 @@ Or you can go to the nice cave but Obirah is watching the entrance to the cave a
 will challenge you to a duell.
 
 The crow will determing your fate. """)
+print()
+print()
 
 input("entert to continue >>>")
 
@@ -260,7 +262,7 @@ if fate == "Gates of Hell":
     ri = "the more you take the more you leave behind"
     ans = ['finger print', 'fingerprint', 'fingerprints']
     print()
-    print(ri[0])
+    print(ri)
     time.sleep(2)
     start_time = time.time()
     answ = input(f"what's your answer, {player_name}? >>>  " )
